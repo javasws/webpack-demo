@@ -55,6 +55,32 @@ You can also set it to 'none' to disable any default behavior. Learn more: https
 
 D:\devDoc\webWork\webpack-demo>
 ```
+##用npm通用命令来调用webpack编译
+在package.json配置下的script下添加参数"build": "webpack"，然后执行
+```npm run build```来调用执行webpack的打包编译
+```
+D:\devDoc\webWork\webpack-demo>npm run build
 
+> webpack-demo@1.0.0 build D:\devDoc\webWork\webpack-demo
+> webpack
 
+Hash: 31b1c1a633c636cc5864
+Version: webpack 4.36.1
+Time: 352ms
+Built at: 2019-07-22 11:50:07 PM
+    Asset     Size  Chunks             Chunk Names
+bundle.js  157 KiB       0  [emitted]  main
+Entrypoint main = bundle.js
+[2] ./src/index.js 349 bytes {0} [built]
+[3] (webpack)/buildin/global.js 472 bytes {0} [built]
+[4] (webpack)/buildin/module.js 497 bytes {0} [built]
+    + 2 hidden modules
+
+WARNING in configuration
+The 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defa
+ults for each environment.
+You can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/
+
+D:\devDoc\webWork\webpack-demo>
+```
 
