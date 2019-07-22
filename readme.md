@@ -31,6 +31,30 @@ npm install webpack webpack-cli --save-dev
    You can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/
 ```
 这个时候刷新项目目录，可以看到打包出的在html同级目录的main.js文件。
-在浏览器可以看到html的效果。
+在浏览器可以看到html的效果（html没有meta设置字符集会乱码）。
+##使用webpack.config.js配置文件
+在配置号webpack.config.js配置文件后执行```npx webpack --config webpack.config.js```
+```
+D:\devDoc\webWork\webpack-demo>npx webpack --config webpack.config.js
+Hash: 31b1c1a633c636cc5864
+Version: webpack 4.36.1
+Time: 476ms
+Built at: 2019-07-22 11:44:16 PM
+    Asset     Size  Chunks             Chunk Names
+bundle.js  157 KiB       0  [emitted]  main
+Entrypoint main = bundle.js
+[2] ./src/index.js 349 bytes {0} [built]
+[3] (webpack)/buildin/global.js 472 bytes {0} [built]
+[4] (webpack)/buildin/module.js 497 bytes {0} [built]
+    + 2 hidden modules
+
+WARNING in configuration
+The 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defa
+ults for each environment.
+You can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/
+
+D:\devDoc\webWork\webpack-demo>
+```
+
 
 
