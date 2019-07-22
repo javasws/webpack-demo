@@ -3,9 +3,9 @@ import $ from 'jquery';
 
 $(document).ready(function () {
 
-    console.log("test")
+    console.log("测试");
 
-})
+});
 
 function component() {
     var element = document.createElement('div');
