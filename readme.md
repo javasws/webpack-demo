@@ -100,6 +100,35 @@ found 0 vulnerabilities
 
 D:\devDoc\webWork\webpack-demo>
 ```
+在修改style.css和index.js后执行```npm run build```
+```
+D:\devDoc\webWork\webpack-demo>npm run build
+
+> webpack-demo@1.0.0 build D:\devDoc\webWork\webpack-demo
+> webpack
+
+Hash: 50a8c489d7786ec3250c
+Version: webpack 4.36.1
+Time: 4827ms
+Built at: 2019-07-23 8:36:39 AM
+    Asset     Size  Chunks             Chunk Names
+bundle.js  163 KiB       0  [emitted]  main
+Entrypoint main = bundle.js
+[2] ./src/index.js 407 bytes {0} [built]
+[3] (webpack)/buildin/global.js 472 bytes {0} [built]
+[4] (webpack)/buildin/module.js 497 bytes {0} [built]
+[5] ./src/style.css 1.06 KiB {0} [built]
+[6] ./node_modules/css-loader/dist/cjs.js!./src/style.css 166 bytes {0} [built]
+    + 5 hidden modules
+
+WARNING in configuration
+The 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defaults for each enviro
+nment.
+You can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/
+
+D:\devDoc\webWork\webpack-demo>
+```
+打开页面，看到js给页面加的div的Hellowebpack字体变为了红色，样式管理到位。
 
 
 
