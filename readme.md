@@ -1,5 +1,5 @@
 #[演示webpack作用](https://www.webpackjs.com/guides/getting-started/)
-#主要命令执行记录
+#起步流程和命令记录
 ##初始化项目并配置
 先在webStorm下执行命令创建项目、初始化并添加依赖包
 ```
@@ -55,9 +55,10 @@ You can also set it to 'none' to disable any default behavior. Learn more: https
 
 D:\devDoc\webWork\webpack-demo>
 ```
+执行完成后能看到webpack配置文件里面的内容生效，生成了一个bundle.js。
 ##用npm通用命令来调用webpack编译
 在package.json配置下的script下添加参数"build": "webpack"，然后执行
-```npm run build```来调用执行webpack的打包编译
+```npm run build```来调用执行webpack的打包编译。
 ```
 D:\devDoc\webWork\webpack-demo>npm run build
 
@@ -83,4 +84,22 @@ You can also set it to 'none' to disable any default behavior. Learn more: https
 
 D:\devDoc\webWork\webpack-demo>
 ```
+#管理资源
+##加载css
+执行```npm install --save-dev style-loader css-loader```给配置文件添加样式加载器。
+```
+D:\devDoc\webWork\webpack-demo>npm install --save-dev style-loader css-loader
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.9 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.9: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
++ style-loader@0.23.1
++ css-loader@3.1.0
+added 15 packages from 47 contributors and audited 5429 packages in 12.081s
+found 0 vulnerabilities
+
+
+D:\devDoc\webWork\webpack-demo>
+```
+
+
 
