@@ -129,6 +129,20 @@ You can also set it to 'none' to disable any default behavior. Learn more: https
 D:\devDoc\webWork\webpack-demo>
 ```
 打开页面，看到js给页面加的div的Hellowebpack字体变为了红色，样式管理到位。
+##加载图片
+执行```npm install --save-dev file-loader```给配置文件添加文件加载器。
+```
+D:\devDoc\webWork\webpack-demo>npm install --save-dev file-loader
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.9 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.9: wanted
+ {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
++ file-loader@4.1.0
+added 2 packages from 2 contributors and audited 5443 packages in 8.581s
+found 0 vulnerabilities
+```
+
+
 
 
 
