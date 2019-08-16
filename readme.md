@@ -141,7 +141,43 @@ npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@
 added 2 packages from 2 contributors and audited 5443 packages in 8.581s
 found 0 vulnerabilities
 ```
-
+添加两个字体文件，然后在style.css里面添加
+```
+@font-face {
+   font-family: 'MyFont';
+   src: url("./fontawesome-webfont.woff2") format('woff2'),
+        url("./fontawesome-webfont.woff") format('woff');
+   font-weight: 600;
+   font-style: normal;
+}
+```
+接着给.hello添加 ```font-family: 'MyFont';``` 样式后执行```npm run build```,可以看到dist下增加了字体文件，打开页面按F12能看到加载了一个字体文件。
+```
+D:\devDoc\webWork\webpack-demo>npm run build
+> webpack-demo@1.0.0 build D:\devDoc\webWork\webpack-demo
+> webpack
+Hash: 9063d924aeac15f37196
+Version: webpack 4.36.1
+Time: 523ms
+Built at: 2019-08-16 9:58:57 AM
+                                 Asset      Size  Chunks             Chunk Names
+  68742aa1cbc6e5d22bf2ef94da525503.gif  97.7 KiB          [emitted]
+  7d37c754f3369fff31843ef79cb5d835.png  33.2 KiB          [emitted]
+af7ae505a9eed503f8b8e6982036873e.woff2  75.4 KiB          [emitted]
+                             bundle.js   164 KiB       0  [emitted]  main
+ fee66e712a8a08eef5805a46892932ad.woff  95.7 KiB          [emitted]
+Entrypoint main = bundle.js
+ [2] ./src/icon.png 82 bytes {0} [built]
+ [3] ./src/index.js 529 bytes {0} [built]
+ [4] (webpack)/buildin/global.js 472 bytes {0} [built]
+ [5] (webpack)/buildin/module.js 497 bytes {0} [built]
+ [6] ./src/style.css 1.06 KiB {0} [built]
+ [7] ./node_modules/css-loader/dist/cjs.js!./src/style.css 783 bytes {0} [built]
+[10] ./src/fontawesome-webfont.woff2 84 bytes {0} [built]
+[11] ./src/fontawesome-webfont.woff 83 bytes {0} [built]
+[12] ./src/avatar.gif 82 bytes {0} [built]
+    + 6 hidden modules
+```
 
 
 
