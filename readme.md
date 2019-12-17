@@ -178,7 +178,22 @@ Entrypoint main = bundle.js
 [12] ./src/avatar.gif 82 bytes {0} [built]
     + 6 hidden modules
 ```
-
-
+### 加载数据
+载入csv和xml库，用户处理数据文件。先执行```npm install --save-dev csv-loader xml-loader```，然后在webpack.config.js里面添加
+```
+{
+   test: /\.(csv|tsv)$/,
+   use: [
+       'csv-loader'
+   ]
+},
+{
+   test: /\.xml$/,
+   use: [
+       'xml-loader'
+   ]
+}
+```
+,添加数据文件data.xml。好了，可以使用文件里面的数据了。
 
 
