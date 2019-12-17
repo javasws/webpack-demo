@@ -2,6 +2,7 @@ import _ from 'lodash';
 import $ from 'jquery';
 import './style.css';
 import Icon from './icon.png';
+import Data from './data.xml';
 
 $(document).ready(function () {
 
@@ -21,6 +22,8 @@ function component() {
     myIcon.src = Icon;
 
     element.appendChild(myIcon);
+
+    console.log(Data);
 
     return element;
 }
