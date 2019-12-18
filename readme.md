@@ -200,4 +200,13 @@ Entrypoint main = bundle.js
 ## 管理输出
 增加print.js,给以输出。并在index.js和index.html和webpack.config.js里面引用配置。重新编译查看。
 ###设定HtmlWebpackPlugin
-安装插件```npm install --save-dev html-webpack-plugin```
+安装插件```npm install --save-dev html-webpack-plugin```，然后在webpack.config.js里面配置插件。重新编译后可以看页面。
+如果你想要了解更多 HtmlWebpackPlugin 插件提供的全部功能和选项，那么你就应该多多熟悉 [HtmlWebpackPlugin](https://github.com/jantimon/html-webpack-plugin)仓库。
+
+你还可以看一下 [html-webpack-template](https://github.com/jaketrent/html-webpack-template)，除了默认模板之外，还提供了一些额外的功能。
+###清理/dist文件夹
+```npm install clean-webpack-plugin --save-dev```安装插件，[clean-webpack-plugin ](https://www.npmjs.com/package/clean-webpack-plugin)。
+用于管理插件,但是按照官网文档引用后编译出现错误，先后是```TypeError: CleanWebpackPlugin is not a constructor```和```Error: clean-webpack-plugin only accepts an options object. See:```。通过语法改写解决。
+1、```const CleanWebpackPlugin = require('clean-webpack-plugin');```改写为```const {CleanWebpackPlugin} = require('clean-webpack-plugin');```。
+2、```new CleanWebpackPlugin(['dist'])```改写为```new CleanWebpackPlugin()```
+
