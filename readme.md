@@ -197,3 +197,5 @@ Entrypoint main = bundle.js
 ,添加数据文件data.xml。好了，可以使用文件里面的数据了。
 ###回退处理
 回退版本，清理文件。
+## 管理输出
+增加print.js,给以输出。并在index.js和index.html和webpack.config.js里面引用配置。重新编译查看。

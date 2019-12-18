@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import $ from 'jquery';
+import printMe from './print.js';
 
 $(document).ready(function () {
 
@@ -9,8 +10,14 @@ $(document).ready(function () {
 
 function component() {
     var element = document.createElement('div');
+    var btn = document.createElement('button');
 
     element.innerHTML = _.join(['Hello', 'webpack'], '');
+
+    btn.innerHTML = 'Click me and check the console!';
+    btn.onclick = printMe();
+
+    element.appendChild(btn);
 
     return element;
 }
