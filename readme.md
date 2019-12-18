@@ -199,3 +199,5 @@ Entrypoint main = bundle.js
 回退版本，清理文件。
 ## 管理输出
 增加print.js,给以输出。并在index.js和index.html和webpack.config.js里面引用配置。重新编译查看。
+###设定HtmlWebpackPlugin
+安装插件```npm install --save-dev html-webpack-plugin```
