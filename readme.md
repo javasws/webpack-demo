@@ -209,4 +209,5 @@ Entrypoint main = bundle.js
 用于管理插件,但是按照官网文档引用后编译出现错误，先后是```TypeError: CleanWebpackPlugin is not a constructor```和```Error: clean-webpack-plugin only accepts an options object. See:```。通过语法改写解决。
 1、```const CleanWebpackPlugin = require('clean-webpack-plugin');```改写为```const {CleanWebpackPlugin} = require('clean-webpack-plugin');```。
 2、```new CleanWebpackPlugin(['dist'])```改写为```new CleanWebpackPlugin()```
-
+###[Manifest](https://www.webpackjs.com/guides/output-management/#manifest)
+使用[ WebpackManifestPlugin](https://github.com/danethurber/webpack-manifest-plugin)插件可以更好更细致的管理输出。还可以尝试理解[代码分离指南](https://www.webpackjs.com/guides/code-splitting)
